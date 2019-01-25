@@ -1,1 +1,1 @@
-# -All-News-Thats-Fit-to-Scrape
+# All-News-Thats-Fit-to-Scrape
