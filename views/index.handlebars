@@ -1,0 +1,74 @@
+<div class="container jumbotron">
+    <div class="row text-center">
+        <diV class="col-md-4 ml-2 mt-5 text-center">
+            <nav>
+                <h2 style="color:rgb(3, 2, 2)">Motor Trend News Scraper</h2>
+            </nav>
+        </diV>
+        <diV class="col-md-4 mt-5 text-center">
+            <a class="btn btn-danger scrape-new">
+                <h3 style="color: rgb(246, 248, 250)">GET NEW ARTICLE
+                </h3>
+            </a>
+
+        </diV>
+        <div class="container col-md-3 mt-3 mb-3 ml-5 text-center">
+            <header>
+                <nav>
+                    <h4><a class="nav-link" style="color:black" href="/">HOME </a></h4>
+                    <h2><a class=" nav-link" style="color: olive" href="/saved">SAVED ARTICLES</a></h2>
+                </nav>
+            </header>
+        </diV>
+        <div class="col-md-1">
+        </div>
+    </div>
+
+    <div class="bg jumbotron jumbotron-fluid text-center">
+        <h1 class="display-4" style="color:rgb(110, 1, 1)">Motor Trend Today</h1>
+        <p class="lead">GET THE LATEST NEWS FROM <i>MOTOR TREND</i></p>
+    </div>
+    <div class=" container article-container jumbotron">
+        <h1 class=" saved text-center" style="color: rgb(0, 74, 172)"><strong>All Articles</strong></h1>
+        <br>
+        {{#each articles}}
+        <div class="card bg-light mb-3">
+            <div class="card-body">
+                <strong>
+                    <h2 class="card-title">{{title}}</h2>
+                </strong>
+                <h4 class="card-text">{{intro}}</h4>
+                <h5><a href="{{link}}" class="card-link" target="_blank">View Article on <i>MOTOR TREND</i></a></h5>
+                <a data-articleId="{{_id}}" class="btn btn-primary save-btn">Save article</a>
+            </div>
+        </div>
+        {{/each}}
+        <br>
+    </div>
+    <hr>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                </div>
+
+                <div class="col-sm-3">
+                    <h3 class="text-center"><a class="nav-link" style="color: rgb(110, 1, 1)" href='https://github.com/404'>Zoom-Zoom</a></h3>
+                </div>
+
+                <div class="col-sm-2 text-center">
+                    <h3><a style="color: rgb(110, 1, 1)">
+                            <<<<<<|>>>>>>
+                        </a></h3>
+                </div>
+
+                <div class="col-sm-3">
+                    <h3 class="text-center"><a class="nav-link" style="color: rgb(110, 1, 1)" href='https://github.com/DKMS37/All-News-Thats-Fit-to-Scrape'>GitHub
+                            Repo</a></h3>
+                </div>
+
+                <div class="col-sm-2">
+                </div>
+            </div>
+        </div>
+    </footer>
