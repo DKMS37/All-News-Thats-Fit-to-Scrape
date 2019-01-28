@@ -76,9 +76,9 @@ app.get("/scrape", function (req, res) {
                             console.log(inserted);
                         }
                     });
-                // if there are 10 articles, then return the callback to the frontend
+                // if there are 20 articles, then return the callback to the frontend
                 console.log(i);
-                if (i === 10) {
+                if (i === 20) {
                     return res.sendStatus(200);
                 }
             }
