@@ -75,7 +75,7 @@ app.get("/scrape", function (req, res) {
                     });
                 // if there are 20 articles, then return the callback to the frontend
                 console.log(i);
-                if (i === 20) {
+                if (i === 15) {
                     return res.sendStatus(200);
                 }
             }
