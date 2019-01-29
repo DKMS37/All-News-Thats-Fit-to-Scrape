@@ -36,8 +36,12 @@
                     <h4 class="card-text">{{intro}}</h4>
                 </strong>
                 <h5><a href="{{link}}" class="card-link" target="_blank">View Article on <i>MOTOR TREND</i></a></h5>
-                <a data-articleId={{_id}} class="btn btn-primary unsave-btn">Remove from saved</a>
-                <a data-articleId={{_id}} class="btn btn-primary note-modal-btn" data-toggle="modal">Add note</a>
+                <a data-articleId={{_id}} class="btn btn-primary unsave-btn fas fa-eraser ">
+                    <h5>Remove from saved</h5>
+                </a>
+                <a data-articleId={{_id}} class="btn btn-primary note-modal-btn far fa-sticky-note" data-toggle="modal">
+                    <h5>Add note</h5>
+                </a>
             </div>
         </div>
         {{/each}}
@@ -81,13 +85,21 @@
                     <ul class="notes-list">
                     </ul>
                     <div class="form-group text-center">
-                        <label for="note-area"><h4><bold> | NEW NOTE | </bold></h4></label>
+                        <label for="note-area">
+                            <h4>
+                                <bold> | NEW NOTE | </bold>
+                            </h4>
+                        </label>
                         <br>
                         <textarea name="new-note-area" class="form-control" id="note-body" rows="2" required></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary note-save-btn" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-secondary fas fa-ban " data-dismiss="modal">
+                            <h5>Cancel</h5>
+                        </button>
+                        <button type="button" class="btn btn-primary note-save-btn fas fa-save " data-dismiss="modal">
+                            <h5>Save</h5>
+                        </button>
 
                     </div>
                 </div>
