@@ -77,9 +77,33 @@ $(document).ready(function () {
     $("#add-note-modal").modal("toggle");
   });
 
+  // save a note into the database
+  // TODO: add better form validation
+  $(".note-save-btn").on("click", function (event) {
+    event.preventDefault();
+    var articleId = $("#add-note-modal").attr("data-articleId")
+    var newNote = {
+      body: $("#note-body").val().trim()
+    }
+    console.log(newNote);
+    $.ajax("/submit/" + articleId, {
+      type: "POST",
+      data: newNote
+    }).then(
+      function (data) { }
+    );
+  });
 
+  // delete the note that was clicked and remove the whole <li> because the text and delete button are included
+  $(document).on("click", ".delete-note-modal", function (event) {
+    var noteID = $(this).attr("data-noteId");
 
-
-  
+    $.ajax("/notes/" + noteID, {
+      type: "GET"
+    }).then(
+      function (data) {
+        $("#" + noteID).remove();
+      })
+  });
 
 });
